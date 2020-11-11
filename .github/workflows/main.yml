@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Cache node modules
@@ -34,3 +33,7 @@ jobs:
       run: npm run test:ci
     - name: E2E
       run: npm run e2e
+    - name: Deploy site
+      with:
+        build-dir: dist
+      uses:  NickSchimek/deploy_jamstack_action@main
